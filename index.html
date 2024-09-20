@@ -1,0 +1,799 @@
+<html><head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" href="pic/96091_23060210105332.png" type="image/x-icon">
+    <title>Microsoft Access เรื่องการสร้าง switchboard</title>
+    <style type="text/css">
+        body {
+         font-family: "Bai Jamjuree", sans-serif;
+         --d: 4px; 
+         background-color: Beige;
+         background : radial-gradient(
+           circle at 
+           var(--d) 
+           var(--d), 
+    
+           rgb(155, 0, 0) calc(var(--d) - 1px), 
+           rgb(90, 2, 2) var(--d)
+         ) 
+         0 0 / 5px 5px;    
+       }
+       iframe {
+            max-width: 100%;
+            max-height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+     </style>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body style="">
+  <nav class="navbar fixed-top navbar-expand-lg navbar-light " style="background-image: linear-gradient(180deg, #fc8f00, #f19e20);">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">
+        <img src="pic/Microsoft_Access_2013-2019_logo.png" height="32" class="d-inline-block align-text-top">
+        <b>การพัฒนางานฐานข้อมูลด้วยAccess</b>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" href=""><b>หน้าแรก</b></a>
+          </li>
+          <li class="nav-item dropdown ">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <b>สาระการเรียนรู้</b>
+            </a>
+            <ul class="dropdown-menu " aria-labelledby="navbarDropdownMenuLink1" style="background-image: linear-gradient(180deg, #ebb44e, #ff3333d2);">
+              <li><a class="dropdown-item" href="#วิดีโอเบื้องต้นการใช้Access"><b></b>วิดีโอเบื้องต้นการใช้Access</a></li>
+              <li><a class="dropdown-item" href="#ขั้นตอนการพัฒนางานด้วย Access"><b>ขั้นตอนการพัฒนางานด้วย Access</b></a></li>
+              <li><a class="dropdown-item" href="#ตัวอย่างการพัฒนางานฐานข้อมูล"><b>ตัวอย่างการพัฒนางานฐานข้อมูล</b></a></li>
+              <li><a class="dropdown-item" href="#การสร้างเมนูด้วยตัวจัดการสวิตซ์บอร์ด"><b>การสร้างเมนูด้วยตัวจัดการสวิตซ์บอร์ด</b></a></li>
+              <li><a class="dropdown-item" href="#การกำหนดค่าเริ่มต้นการทำงานของ Access"><b>การกำหนดค่าเริ่มต้นการทำงานของ Access</b></a></li>
+              <li><a class="dropdown-item" href="#การสร้างความปลอดภัยให้กับฐานข้อมูล"><b>การสร้างความปลอดภัยให้กับฐานข้อมูล</b></a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://forms.gle/Xsne5nFMuW3mm1qo9" target="_blank">แบบทดสอบก่อนเรียน</a>
+          </li>
+    </nav>
+    <h1>วิดีโอ YouTube</h1>
+    <div class="container my-3">
+      <div class="card " id="profile">
+        <div class="card-header pt-3 text-center" style="background-color: #ef4a5b;"><p class="h1" id="วิดีโอเบื้องต้นการใช้Access"><b>วิดีโอเบื้องต้นการใช้Access</b></p></div>
+        <iframe width="640" height="360" class="" src="https://www.youtube.com/embed/2mnikKCib3I" frameborder="0" allowfullscreen></iframe>
+        
+    <div class="container" class="h2" class="text-center" >แหล่งอ้างอิง: https://www.youtube.com/watch?v=2mnikKCib3I</div>
+    </div>   
+  <script type="text/javascript" src="js/bootstrap.bundle.js"></script>
+  
+  <div class="container my-3">
+    <div class="card " id="profile">
+      <div class="card-header pt-3 text-center" style="background-color: #ef4a5b;"><p class="h1"><b>สาระการเรียนรู้</b></p></div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-sm-4">
+            <p class="h3" id="ขั้นตอนการพัฒนางานด้วย Access"><b>1.ขั้นตอนการพัฒนางานด้วย Access</b></p>
+          </div>
+        <div class="row">
+          <div class="container" >
+          การพัฒนาระบบฐานข้อมูล จะมีขั้นตอนในการพัฒนางาน ดังนี้
+          </div>
+          <div cclass="container">
+            <p class="h4"><b>ขั้นตอนที่ 1 การวิเคราะห์ความต้องการ</b></p>
+          </div>
+          <div class="container">
+            เป็นขั้นตอนแรกในการพัฒนางาน โดยผู้พัฒนาจะสอบถามและจัดเก็บข้อมูลความต้องการและรายละเอีอดต่าง ๆ เพื่อนำมาใช้ในการวิเคราะห์และออกแบบบานข้อมูล โดยวิธีพูดคุยกับผู้บริหารและผู้ใช้งาน  เพื่อให้ทราบจุดประสงค์ที่ต้องการด้านความปลอดภัยในการใช้ฐานข้อมูลจากนั้นทำการรวบรวมข้อมูล และรายงานในระบบงานเดม
+          </div>
+          <div cclass="container">
+            <p class="h4"><b>ขั้นตอนที่ 2 การออกแบบและพัฒนาฐานข้อมูล</b></p>
+          </div>
+          <div class="container">
+            การออกแบบบานข้อมลนับเป็นส่วนที่มีความสำคัญ หากออกแบบไม่ถูกต้องหรืไม่ครบถ้วนอาจทำให้เกิดความยุ่งยากในการแก้ไขเปลี่ยนแปลงข้อมูลภายหลังได้ สำหรับขั้นตอนการออกแบบฐานข้อมูลและพัฒนาด้วยโปรแกรม Microsoft Access มีดังนี้
+          </div>
+          <div class="container">
+            1. เขียน E-R Diagram เพื่อใช้เป็นแม่แบบในการสร้างระบบบานข้อมูล
+          </div>
+          <div class="container">
+            2. นำ E-R Diagram ที่ออกแบบ มาแปลงเป็นโครงสร้างขขของตาราง โดยพิจรณาชนิดของเขตข้อมูลให้เหมาะสมกับข้อมูลที่จัดเก็บ และกำหนดคีย์หลัก ( Primary Key ) ของตาราง พร้อมทั้งกำหนดรายละเอียดต่างๆ ของตาราง เช่น ค่าเริ่มต้นของข้อมูล รูปแบบการรับข้อมูล และการแสดงผล เป็นต้น
+          </div>
+          <div class="container">
+            3. สร้างความสัมพันธ์ระหว่างตาราง
+          </div>
+          <div class="container">
+            4. ป้อนข้อมูลหรือนำเข้าข้อมูลในตาราง
+          </div>
+          <div class="container">
+            5. สร้างคิวรี เพื่อจัดการข้อมูลตามความต้องการ
+          </div>
+          <div class="container">
+            6. สร้างแบบฟอร์มติดต่อผู้ใช้งาน
+          </div>
+          <div class="container">
+            7. สร้างรายงานตามความต้องการของผู้ใช้งาน
+          </div>
+          <div class="container">
+            8. เขียนมาโคร หรือ VBA เพื่อควบคุมการทำงาน
+          </div>
+          <div class="container">
+            9. สร้างเมนู เพื่อความสะดวกต่อการใช้งาน
+          </div>
+          <div cclass="container">
+            <p class="h4"><b>ขั้นตอนที่ 3 การทดสอบการใช้งาน</b></p>
+          </div>
+          <div class="container">
+            หลังจากสร้างงานเสร็จเรียบร้อยแล้ว ต้องทำการทดสอบระบบงานที่พัฒนา โดยนำข้อมูลที่รวบรวมจากระบบเดิมมาทดลองและตรวจสอบผลลัพธ์ เพื่อให้เกิดความมั่นใจและแก้ไขส่วนที่บกพร่อง
+          </div>
+          <div cclass="container">
+            <p class="h4"><b>ขั้นตอนที่ 4 การติดตั้งใช้งาน</b></p>
+          </div>
+          <div class="container">
+            เป็นขั้นตอนในการนำระบบงานฐานข้อมูลที่ทดสอบเรียบร้อยไปติดตั้งเพื่อใช้งานจริง
+          </div>
+          <div cclass="container">
+            <p class="h4"><b>ขั้นตอนที่ 5 การรวบรวมเอกสาร</b></p>
+          </div>
+          <div class="container">
+            เป็นขั้นตอนรวบรวมจัดเก็บเอกสารต่าง ๆ ในการพัฒนางาน
+          </div>
+          <div cclass="container">
+            <p class="h4"><b>ขั้นตอนที่ 6 การบำรุงรักษา</b></p>
+          </div>
+          <div class="container">
+            เป้ฯขั้นตอนในการดูแลแก้ปัญหาให้กับผู้ใช้งาน รวมไปถึงรวบรวมความคิดเห็นและข้อเสนอแนะต่าง ๆ จากผู้ใช้งานเพื่อนำมาปรับปรุงงานในโอกาสต่อไป
+          </div>
+          <div class="col-sm-4">
+            <p class="h3" id="ตัวอย่างการพัฒนางานฐานข้อมูล"><b>2.ตัวอย่างการพัฒนางานฐานข้อมูล</b></p>
+          </div>
+          <div class="container">
+            ตัวอย่างต่อไปนี้เป็นตัวอย่างการพัฒนางานฐานข้อมูลเพื่อนำไปใช้ในระบบงานคลินิก เพื่อเป็นแนวทางในการพัฒนางานฐานข้อมูลขั้นต้นด้วย Microsoft Access
+          </div>
+          <div cclass="container">
+            <p class="h4"><b>2.1 การวิเคราะห์ความต้องการ</b></p>
+          </div>
+          <div class="container">
+            คลินิกของนายพิพัฒน์ มีปัญหาการค้นบัตรคนไข้ เนื่องจากคนไข้ส่วนใหญ่ที่มาใช้บริการตรวจรักษาไม่ได้นำบัตรประจำตัวผู้ป่วยที่คลินิกออกมาให้ด้วย ทำให้เสียเวลาในการค้นหาบัตร ดังนั้นจึงต้องการพัฒนาโปรแกรมช่วยงานเพื่อให้เกิดความรวดเร็วในการทำงาน โดยมีจุดประสงค์ในการพัฒนางาน คือ เพิ่มควารวดเร็วในการค้นหาเลขบัตรประจำตัวของผู้ป่วยที่เข้ามาใช้บริการ และจักเก็บข้อมูลการรักษาในแต่ละครั้ง
+          </div>
+          <div class="container">
+            <p class="h4"><b>2.2 การออกแบบฐานข้อมูลด้วย E-R Diagram</b></p>
+          </div>
+          <div class="container">
+            จากการเก็บรวบรวมข้อมูลและการสอบถามความต้องการจากผู้ใช้งาน ได้พิจรณาออกแบบการจัดเก็บข้อมูลเป็น 2 ตาราง คือ
+          </div>
+          <div class="container">
+            <b>1.ตารางข้อมูลคนไข้ (Custom)</b> เพื่อเก็บข้อมูลส่วนตัวของคนไข้ที่มาใช้บริการ
+          </div>
+          <div class="container">
+            <b>2.ตารางข้อมูลการตรวจรักษา (Inspect)</b> เพื่อจัดเก็บข้อมูลการตรวจรักษาในแต่ละครั้งโดยเขียนเป็น E-R Diagram
+          </div>
+          <div class="card" style="width: 45rem;">
+            <img src="pic/oioioi_baka.jpg" class="card-img-top" >
+          </div>
+          <div cclass="container">
+            <p class="h4"><b>2.3 แปลงเป็นตารางข้อมูลใน Access</b></p>
+          </div>
+          <div class="container">
+            <b>1.สร้างไฟล์ฐานข้อมูล Clinic</b> ใน Access ตาม E-R Diagram ที่ออกแบบ
+          </div>
+          <div class="container">
+            <b>2.สร้างตาราง Custom</b> เพื่อเก็บข้อมูลคนไข้
+          </div>
+          <div class="container">
+            <u>ตารางข้อมูลคนไข้ (Custom)</u>
+          </div>
+          <div class="card" style="width: 40rem;">
+            <img src="pic/Custom.png" class="card-img-top" >
+          </div>
+          <div class="container">
+            โดยกำหนดรายละเอียดของเขตข้อมูลในตาราง ดังนี้
+          </div>
+          <div class="container">
+            1. กำหนดคุณสมบัติ <i>ป้ายอธิบาย</i>  ของเขตข้อมูลต่าง ๆ ตามข้อความ <b><u>คำอธิบาย</u></b>
+          </div>
+          <div class="container">
+            2. กำหนดให้เขตข้อมูล CusID เป็น คีย์หลักตาราง
+          </div>
+          <div class="container">
+            3. กำหนดเขตข้อมูล Title เป็นตัวช่วยสร้างการค้นหา (Lookup Wizard) แบบป้อนคำรายการ โดยกำหนดรายการข้อมูล เป็น "นาย" "นาง" "น.ส." "ด.ช." "ด.ญ." และกำหนดค่าเริ่มต้นเป็นคำว่า "นาย"
+          </div>
+          <div class="container">
+            4. เขตข้อมูล CusName ใช้เก็บ ชื่อ-นามสกุล คนไข้
+          </div>
+          <div class="container">
+            5. เขตข้อมูล Occupat ใช้เก็บ อาชีพ คนไข้ 
+          </div>
+          <div class="container">
+            6. เขตข้อมูล CusAddress ใช้เก็บ ที่อยู่ ซึ่งเป็นบ้านเลขที่ ถนน ตำบล คนไข้
+          </div>
+          <div class="container">
+            7. เขตข้อมูล Amphur ใช้เก็บ ชื่ออำเภอ
+          </div>
+          <div class="container">
+            8. เขตข้อมูล Province ใช้เก็บชื่อจังหวัด โดยกำหนดค่าเริ่มต้นเป็นชื่อจังหวัดที่ตั้งของคลินิกเพื่อให้สะดวกต่อการป้อนข้อมูล
+          </div>
+          <div class="container">
+            9. เขตข้อมูล Mobile ใช้เก็บหมายเลขโทรศัพท์เคลื่อนที่
+          </div>
+          <div class="container">
+            10. เขตข้อมูล HomeTel ใช้เก็บหมายเลขโทรสัพท์บ้าน
+          </div>
+          <div class="container">
+            11. เขตข้อมูล FirstContact ใช้เก็บวันแรกที่มาใช้บริการ กำหนดรูปแบบข้อมูลเป็น d mm yyyy เพื่อให้แสดงผลในรูปแบบวันที่แบบไทย
+          </div>
+          <div class="container">
+            12. เขตข้อมูล Sickname ใช้เก็บ ข้อมูลโรคประจำตัวของคนไข้ 
+          </div>
+          <div class="container">
+            <b>3.สร้างตาราง Inspect</b> เพื่อเก็บข้อมูลการรักษาพร้อมทั้งกำหนดรายละเอียด
+          </div>
+          <div class="container">
+            <u>ตรารางการตรวจรักษา (Inspect)</u> 
+          </div>
+          <div class="card" style="width: 40rem;">
+            <img src="pic/Inspect.png" class="card-img-top" >
+          </div>
+          <div class="container">
+            โดยกำหนดรายละเอียดของเขตข้อมูลในตาราง ดังนี้
+          </div>
+          <div class="container">
+            1.กำหนอดคุณสมบัติ <U>ป้ายคำอธิบาย</U> ของเขตข้อมูลต่างๆ ตามข้อความในช่อง <u><b>คำอธิบาย</b></u>
+          </div>
+          <div class="container">
+            2.กำหนดให้เขตข้อมูล lnspectld เป้นคีย์หลักของตาราง และกำหนดชนิดเขตข้อมูลเป็นตัวเลขอัตดนมัติ (AutoNumber)
+          </div>
+          <div class="container">
+            3.เขตข้อมูล CuslD โดยใช้คีย์นอกรหัสคนไข้ ที่เชื่อมโยงกับตารางคนไข้
+          </div>
+          <div class="container">
+            4.เขตข้อมูล Datelnspect ใช้เก็บข้อมูลวันที่ที่คนไข้มาใช้บริการ โดยกำหนดรูปแบบข้อมุลเป็น <b>d mm yyy</b> เพื่อให้แสดงผลในรูปแบบวันที่แบบไทย และกำหนด <u>ค่าเริ่มต้น</u> ให้มีค่าเป็น Date() เพื่อแสดงข้อมูลในช่วงวันที่ตรวจรักษาเป็นวันที่ปัจจุบัน
+          <div class="container">
+            5.เขตข้อมูล diagnosis ใช้สำหรับเก็บข้อมูลการวินิจฉัยของแพทย์
+          </div>
+          <div class="container">
+            6.เขตข้อมูล Detail ใช้เก็บรายละเอียดในการรักษา
+          </div>
+          <div class="container">
+            7.เขตข้อมูล Effect ใช้เก็บข้อมูลการแพ้ยาคนไข้
+          </div>
+          <div class="container">
+            8.เขตข้อมูล lncome ใช้เก็บารยได้เพื่อนำมาสร้างรายงานสรุปรายได้
+          </div>
+          <div class="card" style="width: 30rem;">
+          <div class="container">
+            <b><u>สาระน่ารู้</u></b> กำหนดรูปแบบวันที่ใน Access จะอ้างอิงรูปแบบวันที่ของระบบปฏิบัติการ ดังนั้นในกรณีไม่สามารถกำหนดรูปแบบวันที่ในลักษณะวันที่แบบไทยได้ ให้แก้ไขในส่วนของ <b>Regional and Language Opton</b>
+          </div>
+          </div>
+          <div class="container">
+            <b>2.4 สร้างความสัมพันธ์ระหว่างตาราง</b>
+          </div>
+          <div class="container">
+            หลังจากสร้างตารางเรียบร้อย ให้สร้างความสัมพันธ์ระหว่างตรรางข้อมูลคนไข้ (Custom) กับตารางข้อมูลการตรวจรักษาหรือ lnspect 
+          </div>
+          <div class="card" style="width: 35rem;">
+            <img src="pic/Re.png" class="card-img-top" >
+          </div>
+          <div class="container">
+            ลักษณะความสัมพันธ์ดังกล่าวเป็นรูปแบบความสัมพันธ์แบบหนึ่งต่อกลุ่ม (1:M) คือคนไข้ 1 คนสามารถเข้ามาตรวจรักษาได้หลายครั้ง หรือข้อมูลในตาราง <b>Custom</b> 1 ระเบียนจะสัมพันธ์กับข้อมูลในตาราง <B>Inspect</B> ได้หลายระเบียน โดยใช้เขตข้อมูลรหัสคนไข้หรือ <b>CusID</b> เป็นเขตข้อมูลสัมพันธ์ระหว่างกัน สำหรับเขตข้อมูล CusID ในตาราง Custom จะต้องไม่มีค่าซ้ำกันเพราะถูกกำหนดให้เป็นคีย์หลัก (Primary Key) ของตาราง ส่วนเขตข่อมูล CusID ในตาราง Inspect สามารถมีค่าซ้ำกันได้เพราะถือเป็นคีย์นอก (foreign Key)
+          </div>
+          <div class="container">
+            <b><i>2.5 ป้อนข้อมูลหรือนำเข้าข้อมูล</i></b>
+          </div>
+          <div class="container">
+            หลังจากสรา้งตารางและความสัมพันธ์ระหว่างตารางเรียบร้อยสามารถป้อนข้อมูลลงในตารางหรืออาจใช้วิธีนำเข้าข้อมูลในกรณีมีการจัดเก็บข้อมูลเป็นไฟล์ Excel โดยดำเนินตามขั้นตอน 
+          </div>
+          <div class="container">
+            (1) ใช้ริบบอน ข้อมูลภายนอก
+          </div>
+          <div class="container">
+            (2) คลิกที่ปุ่ม แหล่งข้อมูลใหม่
+          </div>
+          <div class="container">
+            (3) เลือกรายการนำเข้า จากไฟล์ Excel
+          </div>
+          <div class="card" style="width: 30rem;">
+            <img src="pic/สกรีนช็อต 2024-09-08 123016.png" class="card-img-top" >
+          </div>
+          <div class="container">
+            (4) จะปรากฏหน้าต่าง ให้คลิกที่ปุ่ม [เรียกดู] เพื่อกำหนดไฟล์ Excel ที่จะนำเข้า
+          </div>
+          <div class="container">
+            (5) คลิกเลือกนำเข้าเป็นแบบแผนกข้อมูลเข้ากับตาราง Custom
+          </div>
+          <div class="container">
+            (6) กดปุ่ม [ตกลง]
+          </div>
+          <div class="card" style="width: 30rem;">
+            <img src="pic/สกรีนช็อต 2024-09-08 123215.png" class="card-img-top" >
+          </div>
+          <div class="container">
+            (7) จะปรากฏหน้าต่างเลือกเวิร์กชีต ถ้าข้อมูลที่แสดงถูกต้องให้กดปุ่ม  <b>[ถัดไป]</b>
+          </div>
+          <div class="container">
+            (8) โปรแกรมจะกำหนดให้แถวแรกเป็นส่วนหัวของคอลัมน์ ให้กดปุ่ม <b>[ถัดไป]</b>
+          </div>
+          <div class="card" style="width: 30rem;">
+            <img src="pic/สกรีนช็อต 2024-09-08 123335.png" class="card-img-top" >
+          </div>
+          <div class="container">
+            (9) โปรแกรมจะแสดงให้ผู้ใช้ทราบว่าจะดำเนินการนำเข้าข้อมูลไปยังตาราง Custom ตามที่ระบุ ให้กดปุ่มสเสร็ตสิ่น
+          </div>
+          <div class="card" style="width: 30rem;">
+            <img src="pic/สกรีนช็อต 2024-09-08 123430.png" class="card-img-top" >
+          </div>
+          <div class="container">
+            (10) โปรแกรมจะแสดงหน้าต่างบันทึกการนำเข้า ให้คลิกปุ่ม <b>[ปิด]</b>
+          </div>
+          <div class="card" style="width: 30rem;">
+            <img src="pic/สกรีนช็อต 2024-09-08 130903.png" class="card-img-top" >
+          </div>
+          <div class="container">
+            (11) เมื่อตาราง Custom จะมีขัอมูลในลักษณะ
+          </div>
+          <div class="card" style="width: 30rem;">
+            <img src="pic/AnsCus.png" class="card-img-top" >
+          </div>
+          <div class="container">
+            <b>2.6 สร้างคิวรี</b>
+          </div>
+          <div class="container">
+            สร้างคิวรีแบบพารามิเตอร์ (Parameter Query)โดยกำหนดชื่อ <b>สรุปรายได้</b> เพื่อรับค่าจากผู้ใช้ แล้วนำมาสรุปค่าเพื่อคำนวณรายได้ในแต่ละเดือนตามต้องการ สำหรับการออกแบบคิวรีที่สร้างจะมี
+          </div>
+          <div class="card" style="width: 30rem;">
+            <img src="pic/Re.png" class="card-img-top" >
+          </div>
+          <div class="container">
+            จากรูปจะเห็นว่าคิวรีที่สร้างจะใช้ตาราง lnspect โดยนำเขตข้อมูล <b>Datelnspect</b> กับเขตข้อมูล lncome มาใช้และสร้างเขตข้อมูลรับค่าที่กำหนดด้วยฟังก์ชัน <b>([Datelnspect])</b> ซึ่งหมายถึงการหาค่าตัวเลขของเดือนจากข้อมูลวันตรวจ (Datelnspect) โดยเมื่อเข้าสู่หน้าจอการใช้งานจะมีหน้าจอสอบถามที่ต้องการสรุปได้
+          </div>
+          <div class="card" style="width: 30rem;">
+            <img src="pic/query.png" class="card-img-top" >
+          </div>
+          <div class="container">
+            เมื่อผู้ใช้ป้อนตัวเลขของเดือน (ระหว่าง 1 ถึง 12) จะแสดงยอดรายได้ในเดือนดังกล่าวตามต้องการ
+          </div>
+          <div class="container">
+            <b>2.7 สร้างแบบฟอร์ม</b>
+          </div><div class="container">
+            ในงานนี้จะสร้างแบบฟอร์ม 3 แบบฟอร์ม ได้แก่
+          </div>
+          </div><div class="container">
+            1. แบบฟอร์ม <b>AddCustom</b> เพื่อบันทึกข้อมูลคน
+          </div>
+          </div><div class="container">
+            2. แบบฟอร์ม <b>EditCustom</b> เพื่อบันทึกข้อมูลคน
+           </div>
+           <div class="container">
+            3. แบบฟอร์ม <b>FindCustom</b> สำหรับค้นหาข้อมูลคนไข้
+           </div>
+           <div class="container">
+            4. แบบฟอร์ม <b>Inspection</b> เพื่อเป็นแบบฟอร์มย่อยในการบันทึกข้อมูลการตรวจรักษา
+           </div>
+           <div class="container">
+            ลักษณะของฟอร์มต่าง ๆ จะเป็นดังนี้
+           </div>
+           <div class="container">
+            <b>1. แบบฟอร์ม AddCustom</b>
+           </div>
+           <div class="container">
+            จะใช้ข้อมูลจากตาราง Custom มาสร้างฟอร์ม AddCustom
+           </div>
+           <div class="card" style="width: 30rem;">
+            <img src="pic/Addcustom.png" class="card-img-top" >
+          </div>
+           <div class="container">
+            <b>2.แบบฟอร์ม EditCustom</b>
+           </div>
+           <div class="container">
+            จะใช้ข้อมูลจากตาราง Custom มาสร้าง ดดยเพิ่มคอนโทรลกล่องคำสั่งผสม (Comdo Box) โดยวาดลงไปในส่วนหัวของหัวของฟอร์ม
+           </div>
+           <div class="card" style="width: 30rem;">
+            <img src="pic/AnsEdit.png" class="card-img-top" >
+          </div>
+          <div class="container">
+            จะปรากฎหน้าต่างตัวช่วยสร้าง ให้เลือกที่รายการค้นหาระเบียนในฟอร์ม ให้กดปุ่ม <b>[ กัดไป >]</b>
+          </div>
+          <div class="card" style="width: 30rem;">
+            <img src="pic/edit1.png" class="card-img-top" >
+          </div>
+          <div class="container">
+            จะปรากฎหน้าต่างให้เลือกเขตข้อมูลที่จะใช้งานในกล่องคำสั่งผสม ในที่นี้ CusID และ CusName จากนั้นกดปุ่ม <b>[ กัดไป >]</b>
+          </div>
+          <div class="card" style="width: 30rem;">
+            <img src="pic/edit2.png" class="card-img-top" >
+          </div>
+          <div class="container">
+            ตัวช่วยสร้างจะแนะนำให้ซ่อนคอลัมน์หลักคือ CusID โดยจะแสดงเฉพาะชื่อคนไข้ คือ CusName
+          </div>
+          <div class="card" style="width: 30rem;">
+            <img src="pic/edit3.png" class="card-img-top" >
+          </div>
+          <div class="container">
+            หลังจากกดปุ่ม <b>[ กัดไป >]</b> จะมีหน้าต่างให้กำหนดป้ายชื่อของกล่องคำสั่งผสม ในที่นี้ให้พิมพ์คำว่า "ค้นหาข้อมูล" แล้วกดปุ่ม <b>[เสร็จสิ้น]</b>
+          </div>
+          <div class="card" style="width: 30rem;">
+            <img src="pic/edit4.png" class="card-img-top" >
+          </div>
+          <div class="container">
+            จากนั้นฬให้ทำการปรับแต่งฟอร์ม
+          </div>
+          <div class="card" style="width: 30rem;">
+            <img src="pic/AnsEdit.png" class="card-img-top" >
+          </div>
+          <div class="container">
+            โดยโปรแกรมจะสร้าง<b>แมโครแบบฝังตัว</b> ที่ใช้ค้นข้อมูลจากชื่อคนไข้ในกล่องคำสั่งผสมที่สร้างโดยกำหนดไว้ในเหตุการณ์ <b>หลังอัพเดต</b> (After Update)
+          </div>
+          <div class="card" style="width: 30rem;">
+            <img src="pic/Edit macro.png" class="card-img-top" >
+          </div>
+          <div class="container">
+            3. แบบฟอร์ม FindCustom
+          </div>
+          <div class="container">
+            การสร้างแบบฟอร์ม <b>FindCustom</b> จะใช้ข้อมูลจากตาราง Custom และ Inspect มาสร้าง โดยเพิ่มคอนโทรลแบบกล่องคำสั่งผสมหรือ ComboBox ในลักษณะเช่นเดียวกับฟอร์ม <b>Edit_Custom</b> สำหรับฟอร์มย่อยที่นำมาใช้ชื่อ <b>Inspect</b> โดยกำหนดเป็นฟอร์มแบบแผ่นข้อมูลอยู่ภายในฟอร์มหลักสำหรับขั้นตอนการดำเนินการจะเป็นดังนี้
+          </div>
+          <div class="container">
+            1. สร้างฟอร์ม <b>Custom</b> โดยคลิกตาราง <b>Custom</b> จากนั้นใช้ริบบอน <b>สร้าง</b> แล้วคลิกปุ่ม <b>ฟอร์ม</b> เพื่อสร้างฟอร์มอัตโนมัติ (Auto Form)
+          </div>
+          <div class="card" style="width: 30rem;">
+            <img src="pic/find1.png" class="card-img-top" >
+          </div>
+          <div class="container">
+            2. ปรับแต่งขนาดและระยะเขตข้อมูลในส่วนของฟอร์มย่อยด้านล่างให้เหหมาะสม โดยสามารถซ่อนเขตข้อมูล <b>รหัสตรวจรักษา</b> ได้โดยคลิกเมาส์ขวาที่เขตข้อมูลดังกล่าว แล้วเลือกรายการ <b>ซ่อนเขตข้อมูล</b>
+          </div>
+          <div class="card" style="width: 30rem;">
+            <img src="pic/find2.png" class="card-img-top" >
+          </div>
+          <div class="container">
+            3. ใช้ริบบอนรูปแบบเพื่อเปลี่ยนรูปแบบตัวอักษรในฟอร์มให้เป็น Tahoma 11pt.
+          </div>
+          <div class="card" style="width: 30rem;">
+            <img src="pic/find3.png" class="card-img-top" >
+          </div>
+          <div class="container">
+            4. เปลี่ยนมุมมองเป็น มุมมองออกแบบ แล้วใช้ริบบอน <b>จัดเรียง</b> คลิกที่ปุ่ม <b>เลือกเค้าโครง</b> แล้วคลิกปุ่ม <b>เอาเค้าโครงออก</b> เพื่อนำเค้าโครงภายในฟอร์มออกไป
+          </div>
+          <div class="card" style="width: 30rem;">
+            <img src="pic/find4.png" class="card-img-top" >
+          </div>
+          <div class="container">
+            5. ปรับแต่งฟอร์มให้เลือกเฉพาะเขตข้อมูลที่ต้องการ ได้แก่ รหัสคนไข้, คำนำหน้า, ชื่อคนไข้ และโรคประจำตัว
+          </div>
+          <div class="card" style="width: 30rem;">
+            <img src="pic/find5.png" class="card-img-top" >
+          </div>
+          <div class="container">
+            6. กำหนดคุณสมบัติป้ายคำอธิบายของฟอร์มเป็นคำว่า ค้นหาข้อมูล
+          </div>
+          <div class="card" style="width: 30rem;">
+            <img src="pic/find6.png" class="card-img-top" >
+          </div>
+          <div class="container">
+            7.สร้างคอนโทรลกล่องคำสั่งผสมไว้ในส่วนหัวของฟอร์ม จากนั้นในหน้าต่างตัวช่วยสร้างกล่องคำสั่งผสม ให้เลือกรายการแรก เพื่อสร้างกล่องคำสั่งผสมจากตารางหรือคิวรี แล้วกดปุ่ม <b>[ถัดไป >]</b>
+          </div>
+          <div class="card" style="width: 30rem;">
+            <img src="pic/find7.png" class="card-img-top" >
+          </div>
+          <div class="container">
+            8. เลือกตาราง Custom และเลือกข้อมูล CusID กับ CusName ในหน้าต่างถัดไป
+          </div>
+          <div class="card" style="width: 30rem;">
+            <img src="pic/find8.1.png" class="card-img-top" >
+          </div>
+          <div class="card" style="width: 30rem;">
+            <img src="pic/find8.2.png" class="card-img-top" >
+          </div>
+          <div class="container">
+            9. ให้จัดเรียงลำดับตามชื่อคนไข้ (CusName)
+          </div>
+          <div class="card" style="width: 30rem;">
+            <img src="pic/find9.1.png" class="card-img-top" >
+          </div>
+          <div class="card" style="width: 30rem;">
+            <img src="pic/find9.2.png" class="card-img-top" >
+          </div>
+          <div class="container">
+            10. เลือกจดจำค่าและตั้งชื่อป้ายกล่องคำสั่งผสม เป็น <b>ค้นหาข้อมูล</b>
+          </div>
+          <div class="card" style="width: 30rem;">
+            <img src="pic/find10.1.png" class="card-img-top" >
+          </div>
+          <div class="card" style="width: 30rem;">
+            <img src="pic/find10.2.png" class="card-img-top" >
+          </div>
+          <div class="container">
+            11. ปรับแต่งแบบอักษรของกล่องคำสั่งผสม เป็น Tahoma 11pt. พร้อมทั้งสร้างแมโครแบบฝังตัวโดยกดที่ปุ่ม[...] ในเหตุการณ์ <b>หลังการอัพเดต (After Update)</b>
+          </div>
+          <div class="card" style="width: 30rem;">
+            <img src="pic/find11.png" class="card-img-top" >
+          </div>
+          <div class="container">
+            12. กำหนดคำสั่งในแมโคร โดยชื่อของกล่องคำสั่งผสมจะต้องตรงกัน ในที่นี้คือ Combo72
+          </div>
+          <div class="card" style="width: 30rem;">
+            <img src="pic/find12.png" class="card-img-top" >
+          </div>
+          <div class="container">
+            ดดยคำสั่งหรือแอคชั่นที่ใช้ได้แก่ GotoControl เพื่อกำหนดโฟกัสให้กับคอนโทรล CusID จากนั้นใช้คำสั่ง find Record เพื่อค้นหาข้อมูลที่ตรงกับรายการที่เลือกในกล่องคำลั่งผสม โดยกำหนดสิง่ที่ค้น = <b>[Combo72]</b> แล้วใช้คำสั่ง GotoControl เพื่อกำหนดโฟกัสให้กับคอนโทรล Combo72
+          </div>
+          <div class="container">
+            13. บันทึกแมโคร แล้วทดสอบการทำงานโดยการเปิดฟอร์มใช้งาน โดยเมื่อพิมพ์ชื่อคนไข้จะมีรายนชื่อคนไข้ให้เลือก
+          </div>
+          <div class="card" style="width: 30rem;">
+            <img src="pic/find13.png" class="card-img-top" >
+          </div>
+          <div class="container">
+            14. หลังจากเลือกรายการชื่อโปรแกรมจะแสดงข้อมูลคนไข้ขึ้นมา
+          </div>
+          <div class="card" style="width: 30rem;">
+            <img src="pic/find14.png" class="card-img-top" >
+          </div>
+          <div class="container">
+            15. ซึ่งสามารถป้อนข้อมูลการวินิจฉัยและรายเอียดการักษา รวมทั้งรายได้ในการตรวจรักษา
+          </div>
+          <div class="card" style="width: 30rem;">
+          <div class="container">
+            <b><u>สาระน่ารู้</u></b> : การกำหนดคุณสมบัติของแบบฟอร์มในส่วน <b>ผุดขึ้น (Pop-up)</b> จะทำให้ฟอร์มที่กำหนดจะอยู่ด้านหน้าเหนือฟอร์มอื่น ๆ
+          </div>
+          <div class="container">
+            ถ้ากำหนดคุณสมบัติฟอร์มในส่วน <b>โมดอล (Modal)</b> ให้มีสภานะเป็น <b>ใช่</b> จะหมายถึงกำหนดให้ฟอร์มที่กำหนดเป็นฟอร์มหลัก โดยฟอร์มอื่นจะทำงานไม่ได้จนกว่าจะปิดฟอร์มที่กำหนดนี้เสียก่อน
+          </div>
+          </div>
+          <div class="container">
+            <b>2.8 สร้างรายงาน</b>
+          </div>
+          <div class="container">
+            สร้างรายงาน <b>สรุปรายได้</b> โดยออกแบบรายงาน
+          </div>
+          <div class="card" style="width: 30rem;">
+            <img src="pic/report.png" class="card-img-top" >
+          </div>
+          <div class="container">
+            ในส่วนท้ายรายงานจะใช้ฟังก์ชัน Sum เพื่อคำนวณรายได้รวมประจำเดือนที่ต้องการ โดยเมื่อเปิดรายงานจะหน้าต่างสอบถามเดือนที่ต้องการสรุปผล จากนั้นจะแสดงผลรายงานในลักษณะ
+          </div>
+          <div class="card" style="width: 30rem;">
+            <img src="pic/report 2.jpg" class="card-img-top" >
+          </div>
+  </div>
+           <div class="col-sm-4">
+            <p class="h3" id="การสร้างเมนูด้วยตัวจัดการสวิตซ์บอร์ด"><b>3.การสร้างเมนูด้วยตัวจัดการสวิตซ์บอร์ด</b></p>
+            </div>
+            <div class="container">
+            ใน Access จะมีเครื่องมือช่วยเพื่อสร้างฟอร์มเมนูเลือกการาทำงาน คือ <b>ตัวจัดการสวิตช์บอร์ด</b> (switchboard Manager) ซิ่งจะช่วยให้สร้างให้สร้างเมนูได้ง่ายและสะดวกขึ้น
+            </div>
+          <div class="container">
+            <b>3.1 การเพิ่มปุ่มเครืองมือ ตัวจัดการสวิตช์บอร์ด</b>
+          </div>
+          <div class="container">
+           ใน Microsoft Access เวอร์ชัน 2016 จะไม่มีปุ่มเครื่องมือ <b>ตัวจัดการสวิิตบอร์ด</b> อยู่ในริบบอนจำเป็นต้องเพิ่มปุ่มเครืองมือเข้ามา โดยคลิกที่ริบบอน <b>ไฟล์</b> แล้วเลือกรายการ <b>ตัวเลือก</b> จะปรากฎหน้าต่างตัวเลือก Access  
+          </div>
+          <div class="container">
+          จากนั้นให้ดำเนินการดังนี้ คือ
+          </div>
+          <div class="container">
+          (1) คลิกที่รายการ <b>กำหนดริบบอนเอง</b>
+          </div>
+          <div class="container">
+            (2) เลือกรายการ <b>คำสั่งที่ไม่อยู่ใน Ribbon</b>
+          </div>
+          <div class="container">
+            (3) จะพบ <b>ตัวจัดการสวิตช์บอร์ด</b> แต่ยังไม่สามารถเพิ่มได้
+          </div>
+          <div class="container">
+            (4) ให้คลิกที่ปุ่ม <b>กลุ่มใหม่</b>
+          </div>
+          <div class="container">
+            (5) จะปรากฎ <b>กลุ่มใหม่ (กำหนดเอง)</b>
+          </div>
+          <div class="card" style="width: 30rem;">
+            <img src="pic/1.png" class="card-img-top" >
+          </div>
+          <div class="container">
+            (6) จากนั้นคลิกที่ <b>ตัวจัดการสวิตช์บอร์ด</b> ในช่องด้านซ้ายมือ แล้ว กดปุ่ม <b>[ เพิ่ม >>]</b>
+          </div>
+          <div class="container">
+            (7) <b>ตัวจัดการสวิตช์บอร์ด</b> จะถูกย้ายมาในช่องด้านขวามือ
+          </div>
+          <div class="container">
+            (8) จากนั้นกดปุ่ม <b>[ ตกลง ]</b>
+          </div>
+          <div class="card" style="width: 30rem;">
+            <img src="pic/6.png" class="card-img-top" >
+          </div>
+          <div class="container">
+            (9) จะปรากฎปุ่มเครื่องมือ <b>ตัวจัดการสวิตช์บอร์ด</b> ที่ริบบอน <b>เครื่องมือฐานข้อมูล</b> 
+          </div>
+          <div class="card" style="width: 40rem;">
+            <img src="pic/Untitled design.png" class="card-img-top" >
+          </div>
+          <div class="container">
+             <b>3.2 การใช้งาน ตัวจัดการสวิตช์บอร์ด</b>
+          </div>
+          <div class="container">
+            (1) กดปุ่มเครรื่องมือ <b>ตัวจัดการสวิตช์บอร์ด</b> ในริบบอน<b>เครื่องมือฐานข้อมูล</b> ในครั้งแรก จะปรากฎหน้าต่างสอบถาม  
+          </div>
+          <div class="card" style="width: 30rem;">
+            <img src="pic/swi1.png" class="card-img-top" >
+          </div>
+          <div class="container">
+            (2) เมื่อกดปุ่ม[ ใช่ ] จะปรากฎหน้าต่าง ตัวจัดการสวิตช์บอร์ด  
+          </div>
+          <div class="card" style="width: 30rem;">
+            <img src="pic/swi2.png" class="card-img-top" >
+          </div>
+          <div class="container">
+            (3) การสร้างรายการเมนูเริ่มโดยเริ่มกดปุ่ม <b>[แก้ไข...]</b> ซึ่งจะเข้าสู๋หน้าจอการแก้ไขหน้าสวิตช์บอร์ด 
+          </div>
+          <div class="card" style="width: 30rem;">
+            <img src="pic/swi3.png" class="card-img-top" >
+          </div>
+          <div class="container">
+            (4) กดปุ่ม <b>[ใหม่...]</b> ให้ใส่ข้อความเมนูเป็น <b>ค้นข้อมูล</b> และกำหนดเป็น <b>เปิดฟอร์มในโหมดแก้ไข</b> จากนั้นเลือกฟอร์ม <b>FileCustom</b>
+          </div>
+          <div class="card" style="width: 30rem;">
+            <img src="pic/swi4.png" class="card-img-top" >
+          </div>
+          <div class="container">
+            (5) เมื่อกดปุ่ม<b>[ตกลง]</b> จะได้รายการ <b>ค้นข้อมูล</b> ในหน้าต่างสวิตช์บอร์ดหลัก 
+          </div>
+          <div class="card" style="width: 30rem;">
+            <img src="pic/swi5.png" class="card-img-top" >
+          </div>
+          <div class="container">
+            (6) จากนั้นให้สร้างรายการเมนูต่างๆบนหน้า สวิตช์บอร์ดหลัก ในลักษณะเช่นเดียวกับการสร้างรายการ <b>ค้นข้อมูล</b> ได้แก่ 
+          </div>
+          <div class="container">
+            (6.1) การกำหนดค่าในรายการ <b>ป้อนข้อมูล</b>
+          </div>
+          <div class="card" style="width: 30rem;">
+            <img src="pic/swi6.1.png" class="card-img-top" >
+          </div>
+          <div class="container">
+            (6.2) การกำหนดค่าในรายการ <b>แก้ไขข้อมูล</b>
+          </div>
+          <div class="card" style="width: 30rem;">
+            <img src="pic/swi6.2.png" class="card-img-top" >
+          </div>
+          <div class="container">
+            (6.3) การกำหนดค่าในรายการ <b>พิมพ์รายงาน</b>
+          </div>
+          <div class="card" style="width: 30rem;">
+            <img src="pic/swi6.3.png" class="card-img-top" >
+          </div>
+          <div class="container">
+            (6.4) การกำหนดค่าในรายการ <b>ออกจากโปรแกรม</b> (ต้องสร้างแมโคร QuitdAccess ก่อน)
+          </div>
+          <div class="card" style="width: 30rem;">
+            <img src="pic/swi6.4.png" class="card-img-top" >
+          </div>
+          <div class="container">
+            (7) เมื่อสร้างเมนูครบตามที่กำหนด ให้แก้ไขชื่อสวิตช์บอร์ดเป็น <b>ระบบงานคลินิก</b>
+          </div>
+          <div class="card" style="width: 30rem;">
+            <img src="pic/swi7.png" class="card-img-top" >
+          </div>
+          <div class="container">
+            (8) กดปุ่ม <b>[ ปิด ]</b> เพื่อกลับสู่หน้าจอหลักเดิม
+          </div>
+          <div class="card" style="width: 30rem;">
+            <img src="pic/swi8.png" class="card-img-top" >
+          </div>
+          <div class="container">
+            (9) และกดปุ่ม <b>[ ปิด ]</b> อีกครั้งเพื่อออกจากหน้าจอการสร้างเมนูสวิตช์บอร์ด
+          </div>
+          <div class="container">
+            สำหรับส่วนของรายการ <u>ออกจากโปรแกรม</u> จะต้องสร้างมาโคร ชื่อ <b>Macro-Exit</b> มารองรับการทำงานโดยใช้ แอคชัน <b><u>Quit Access</u></b>
+          </div>
+          <div class="card" style="width: 30rem;">
+            <img src="pic/quit.png" class="card-img-top" >
+          </div>
+          <div class="container">
+            3.3 การใช้งานเมนูสวิตซ์บอร์ด
+          </div>
+          <div class="container">
+            เมื่อสร้างสวิตช์บอร์ดเสร็จจะเกิดฟอร์ม <b>สวิตซ์บอร์ด</b> (switchboard) ขึ้นมา โดยสามารถเปิดฟอร์มเพื่อใช้งานได้โดยจะมีหน้าจอ
+          </div>
+          <div class="card" style="width: 30rem;">
+            <img src="pic/AnsSwi.png" class="card-img-top" >
+          </div>
+          <div class="col-sm-4">
+            <p class="h3" id="การกำหนดค่าเริ่มต้นการทำงานของ Access"><b>4.การกำหนดค่าเริ่มต้นการทำงานของ Access</b></p>
+          </div>
+          <div class="container">
+            กำหนดค่าเริ่มต้นการทำงานของ Access โดยคลิกที่ริบบอน <b>ไฟล์</b> แล้วคลิกที่รายการ <b>ตัวเลือก</b>จะปรากฎหน้าต่าง <b>ตัวเลือกของ Access</b> แล้วดำเนินการ ดังนี้
+          </div>
+          <div class="container">
+            (1) เลือกรายการ <b>ฐานข้อมูลปัจจุบัน</b>
+          </div>
+          <div class="container">
+            (2) กำหนดชื่อโปรแกรมประยุกต์เป็น โปรแกรมระบบงานคลินิก
+          </div>
+          <div class="container">
+            (3) กำหนดการแสดงฟอร์มเป็นฟอร์มเมนูหรือฟอรืมจากสวิตซ์บอร์ด
+          </div>
+          <div class="container">
+            (4) กำหนดตัวเลือกหน้าต่างเอกสารเป็นแบบ หน้าต่างซ้อนกัน
+          </div>
+          <div class="container">
+            (5) จากนั้นให้ยกเลิกการใช้แป้นพิมพ์พิเศษและการเปิดใช้งานมุมมองต่าง ๆ
+          </div>
+          <div class="container">
+            (6) ยกเลิกการแสดงหน้านำทาง
+          </div>
+          <div class="card" style="width: 30rem;">
+            <img src="pic/default.png" class="card-img-top" >
+          </div>
+          <div class="container">
+            นอกจากนี้ควรยกเลิกการอนุญาตให้ใช้เมนูแบบเต็ม และเมนูลัดเพื่อไม่ให้ผู้ใช้เข้าไปเกี่ยวข้องและจัดการต่าง ๆ โดยเมื่อเปิดไฟล์ฐานข้อมูลขึ้นมาใหม่จะได้เข้าสู่หน้าจอสวิตซ์บอร์ดและไม่สามารถใช้หน้าต่างหรือเมนูใด ๆ ใน Access ได้ ทั้งนี้เพื่อป้องกันผู้ใช้งานไม่ให้เข้ามาแก้ไขปรับเปลี่ยนสิ่งต่าง ๆ ในโปรแกรม ซึ่งอาจทำโปรแกรมใช้งานเกิดความเสียหายได้
+          </div>
+          <div class="col-sm-4">
+            <p class="h3" id="การสร้างความปลอดภัยให้กับฐานข้อมูล"><b>5.การสร้างความปลอดภัยให้กับฐานข้อมูล</b></p>
+          </div>
+          <div class="container">
+            ในการใช้พัฒนาฐานข้อมูล อาจจำเป็นต้องป้องกันโครงสร้างการออกแบบ และตัวโปรแกรมควบคุม เพื่อไม่ให้ผู้ใช้ปรับเปลี่ยนแก้ไขซึ่งทำให้เกิดผลกระทบต่อการใช้งาน ดังนั้นโปรแกรม Microsoft Access จึงมีวิธีป้องกันและรักษาความปลอดภัยของข้อมูล และองค์ประกอบของไฟล์ฐานข้อมูลดังนี้
+          </div>
+          <div class="container">
+            <b>5.1 การกำหนดรหัสผ่าน เพื่อเข้าใช้งานไฟล์ฐานข้อมูล</b>
+          </div>
+          <div class="container">
+            เป็นการสร้างระบบรักษาความปลอดภัยแบบง่ายๆ โดยใช้วิธีกำหนดรหัสผ่านในกา่รเข้าถึงไฟล์ฐานข้อมูล คือ <b>(1)</b> เลือกรายการ <b>เปิด</b> <b>(2)</b> คลิกที่ <b>เรียกดู</b> <b>(3)</b> เลือกไฟล์ฐานข้อมูลที่ต้องการ <b>(4)</b> คลิกรายการที่ปุ่ม <b>[เปิด]</b> <b>(5)</b> เลือกหัวข้อ <b>เปิดแบบเอกสิทธิ์เฉพาะบุคคล</b>
+          </div>
+          <div class="card" style="width: 30rem;">
+            <img src="pic/sec1.png" class="card-img-top" >
+          </div>
+          <div class="container">
+            จะปรากฎหน้าต่างเหมือนการเปิดฐานข้อมูลทั่วไปตามปกติ แต่ให้ใช้ริบบอน <b>แฟ้ม</b>
+          </div>
+          <div class="container">
+            <b>(6)</b> เลือกรายการ <b>ช้อมูล</b> จากนั้น <b>(7)</b> คลิกที่ปุ่ม <b>เข้ารหัสลับด้วยรหัสผ่าน</b>
+          </div>
+          <div class="card" style="width: 30rem;">
+            <img src="pic/sec2.png" class="card-img-top" >
+          </div>
+          <div class="container">
+            จะมีหน้าต่างให้กำหนดรหัสผ่าน <b>(8)</b> ให้ป้อนหรัสผ่านลงไป และ <B>(9)</B> ป้อนซ้ำเดิมอีกครั้งเพื่อยืนยัน
+          </div>
+          <div class="card" style="width: 30rem;">
+            <img src="pic/sec3.png" class="card-img-top" >
+          </div>
+          <div class="container">
+            เมื่อทำการเปิดใช้งานไฟล์ฐานข้อมูลที่เข้ารหัสผ่าน จะปรากฎหน้าต่างให้ป้อนรหัสผ่าน ซึ่งหากป้อนรหัสผ่านไม่ถูกต้องจะไม่สามารถเปิดใช้งานฐานข้อมูลได้
+          </div>
+          <div class="card" style="width: 30rem;">
+            <img src="pic/sec4.png" class="card-img-top" >
+          </div>
+          <div class="container">
+            กรณีต้องการยกเลิกการใส่รหัสผ่าน จะต้องเปิดไฟล์ฐานข้อมูลใน<b>แบบเอกสิทธิ์เฉพาะบุคคล</b>แล้วใช้ริบบอน <b>แฟ้ม</b> เลือกรายการ <b>ข้อมูล</b> จากนั้นคลิกที่ปุ่ม <b>ถอดรหัสลับฐานข้อมูล</b> ดดยจะมีหน้าต่างสอบถามรหัสผ่าน เมื่อป้อนรหัสถูกต้องจะเป็นการยกเลิกการใช้งานรหัสผ่านที่เคยกำหนดไว้
+          </div>
+          <div class="card" style="width: 30rem;">
+            <img src="pic/sec5.png" class="card-img-top" >
+          </div>
+          <div class="container">
+            <b>5.2 การสร้างความปลอดภัยโดยใช้ไฟล์ .accde</b>
+          </div>
+          <div class="container">
+            Microsoft Access สามารถแปลงไฟล์ฐานข้อมูลปกติซึ่งมีนามสกุลเป็น .accdb เป็นไฟล์ .accde ได้ เพื่อป้องกันไม่ให้ผู้ใช้งานไปแก้ไขข้อมูลต่าง ๆ ที่ออกแบบไว้ เช่น ฟอร์ม รายงาน รวมทั้งไม่สามารถเข้าไปดูแมโครหรือ VBA ที่เขียนโปรแกรม อย่างไรก็ดีหลังจากสรา้งเป็นไฟล์.accde แล้วจะไม่สามารถแปลงกลับมาเป็นไฟล์.accdb หรือเป็นไฟล์แบบอื่นได้อีกต่อไป ดังนั้นควรสำรองไฟล์ accdb ซึ่งเป็นต้นฉบับเดิมเสียก่อน สำหรับขั้นตอนการแปลงไฟล์ .acdb เป็นไฟล์ .accde สามารถทำได้ดังนี้
+          </div>
+          <div class="container">
+            (1) เปิดไฟล์ฐานข้อมูลที่ต้องการจะแปลง จากนั้นคลิกริบบอน <b>แฟ้ม</b> แล้วเลือกรายการ <b>บันทึกเป็น</b>
+          </div>
+          <div class="container">
+            (2) จากนั้น <u><b>ดับเบิลคลิก</b></u> ที่ปุ่ม <b>สร้าง ACCDE</b>
+          </div>
+          <div class="card" style="width: 30rem;">
+            <img src="pic/save1.png" class="card-img-top" >
+          </div>
+          <div class="container">
+            (3) จะปรากฎหน้าต่างการบันทึกเพื่อให้กำหนดชื่อไฟล์ accde
+          </div>
+          <div class="card" style="width: 30rem;">
+            <img src="pic/save2.png" class="card-img-top" >
+          </div>
+          <div class="container">
+            (4) จะได้ไฟล์ accde ซึ่งมีรูปไอคอนของไฟล์เป็นกุญแจ ซึ่งสามารถนำไปใช้งานไฟล์แทนไฟล์ฐานข้อมูลปกติคือไฟล์ accdb ได้ทันที
+          </div>
+          <div class="card" style="width: 30rem;">
+            <img src="pic/save3.png" class="card-img-top" >
+          </div>
+  </div>        
